@@ -61,6 +61,7 @@ Feedback, bug reports, and suggestions are welcome.
 ## Credits
 
 Created and maintained by Captain Oddsoul.
+GitHub contributor identity for repository commits: cptnodd.
 
 ## License
 
