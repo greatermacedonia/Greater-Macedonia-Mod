@@ -6,16 +6,17 @@ state={
 	history = {
 		owner = MAC
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
 			air_base = 2
 
 		}
-		victory_points = {
+		victory_points = { #Skopje
 			3882 5
 		}
 
-		victory_points = {
+		victory_points = { #Bitola
 			974 2
 		}
 
@@ -31,6 +32,6 @@ state={
 	}
 	manpower=510323
 	buildings_max_level_factor=1
-	state_category=rural
+	state_category=town
 	local_supplies=0
 }
