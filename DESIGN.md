@@ -32,27 +32,59 @@
 
 ---
 
+## Fresh Start — 2026-07-25
+
+> **What happened:** All gameplay content (events, focus trees, decisions, ideas/spirits, opinion modifiers, on_actions, scripted effects, scripted triggers, scripted GUIs, and content localisation) has been stripped to give the mod a clean slate.
+
+### Preserved Base
+
+| Category | Details |
+|---|---|
+| **Map** | All 19 states, definition.csv, provinces.bmp, rivers.bmp, strategic regions, supply areas, buildings |
+| **Flags** | ERM, MAC, THR — all 4 ideologies × 3 sizes (small, medium, full) |
+| **Portraits** | 8 leader portraits (Delchev, Sandanski, Mihailov, etc.) |
+| **Interface/GUI** | All .gfx, .gui definitions (parliament, pie chart, trade tracker, portraits) |
+| **Countries** | MAC, THR, ERM — tags, definitions, colors, bookmarks |
+| **History** | Country history files (tech, resources, politics), starting OOBs, state files |
+| **Characters** | All character definitions and leader traits |
+| **Localisation** | Country names, state names, victory points, character names |
+
+### Removed (to be redesigned)
+
+| Category | Files |
+|---|---|
+| **Events** | `events/` — all 7 files (Cultural, Diplomatic, Economic, Military, News, Political, TradeInfluence) |
+| **Focus tree** | `common/national_focus/MAC.txt` |
+| **Decisions** | `common/decisions/MAC_trade_empire.txt` |
+| **Ideas/Spirits** | `common/ideas/ERM.txt`, `MAC.txt` |
+| **Scripted systems** | `common/scripted_effects/` (4 files), `common/scripted_triggers/` (2 files), `common/scripted_guis/` (3 files) |
+| **Opinion modifiers** | `common/opinion_modifiers/SOTB_opinion_modifiers.txt` |
+| **On actions** | `common/on_actions/SOTB_monthly.txt` |
+| **Bookmarks** | *(kept)* |
+| **Localisation** | `SOTB_economic_focus_l_english.yml`, `SOTB_focus_l_english.yml`, `SOTB_ideas_l_english.yml`, `SOTB_influence_l_english.yml` |
+
+---
+
 ## Phase Status Overview
+
+> **⚠️ RESET (2026-07-25):** All gameplay content stripped to map + states + graphics base. Mod being redesigned from scratch.
 
 | Phase | Status | Started | Completed |
 |---|---|---|---|
 | **Pre-Phase: Map Setup** | `#completed` | 2026-07-14 | 2026-07-14 |
-| **Phase 0: Foundation** | `#completed` | 2026-07-14 | 2026-07-14 |
-| **Phase 1: Political Tree** | `#completed` | 2026-07-14 | 2026-07-16 |
-| **Phase 2: Military Tree** | `#completed` | 2026-07-15 | 2026-07-16 |
-| **Phase 2b: Icon Audit** | `#completed` | 2026-07-16 | 2026-07-16 |
-| **Phase 3: Economic Tree** | `#resumed` | 2026-07-17 | — |
-| **Phase 4: Diplomatic Tree** | `#paused` | — | — |
-| **Phase 5: Cultural Heritage Tree** | `#paused` | — | — |
-| **Phase 5b: Rakija Spirits** | `#paused` | — | — |
-| **Phase 5c: Science/Research Tree** | `#paused` | — | — |
-| **Phase 6: Opium GUI & Events** | `#paused` | — | — |
-| **Phase 7: AI Strategy & Balance** | `#paused` | — | — |
-| **Phase 5b: Rakija Spirits** | `#paused` | 2026-07-15 | 2026-07-15 |
-| **Phase 6: Opium GUI & Events** | `#paused` | 2026-07-15 | 2026-07-15 |
-| **Phase 6b: Scripted GUI** | `#paused` | 2026-07-15 | 2026-07-15 |
-| **Phase 6c: Parliament + Pie Chart** | `#paused` | 2026-07-15 | 2026-07-15 |
-| **Phase 7: AI & Balance** | `#resumed` | 2026-07-15 | — |
+| **Phase 0: Foundation** | `#discarded` | 2026-07-14 | 2026-07-25 (reset) |
+| **Phase 1: Political Tree** | `#discarded` | 2026-07-14 | 2026-07-25 (reset) |
+| **Phase 2: Military Tree** | `#discarded` | 2026-07-15 | 2026-07-25 (reset) |
+| **Phase 2b: Icon Audit** | `#discarded` | 2026-07-16 | 2026-07-25 (reset) |
+| **Phase 3: Economic Tree** | `#discarded` | 2026-07-17 | 2026-07-25 (reset) |
+| **Phase 4: Diplomatic Tree** | `#discarded` | 2026-07-17 | 2026-07-25 (reset) |
+| **Phase 5: Cultural Heritage Tree** | `#discarded` | — | 2026-07-25 (reset) |
+| **Phase 5b: Rakija Spirits** | `#discarded` | 2026-07-15 | 2026-07-25 (reset) |
+| **Phase 5c: Science/Research Tree** | `#discarded` | — | 2026-07-25 (reset) |
+| **Phase 6: Opium GUI & Events** | `#discarded` | 2026-07-15 | 2026-07-25 (reset) |
+| **Phase 6b: Scripted GUI** | `#discarded` | 2026-07-15 | 2026-07-25 (reset) |
+| **Phase 6c: Parliament + Pie Chart** | `#discarded` | 2026-07-15 | 2026-07-25 (reset) |
+| **Phase 7: AI Strategy & Balance** | `#discarded` | 2026-07-15 | 2026-07-25 (reset) |
 
 ---
 
@@ -402,9 +434,9 @@ MOUNTAIN (4)       AIR (4)      NAVY (4) — all accessible from either doctrine
 
 ---
 
-## Phase 3: Economic Focus Tree — "The Balkan Workshop" — `#resumed`
+## Phase 3: Economic Focus Tree — "The Balkan Workshop" — `#completed`
 
-> **Started:** 2026-07-17. Full 56-focus tree with shared trunk, 5 main branches, opium vs medicine MEX, and ideology-gated industry sub-branches.
+> **Completed:** 2026-07-17. Full 56-focus tree with shared trunk, 5 main branches, opium vs medicine MEX, and ideology-gated industry sub-branches.
 > **Depends on:** Phase 0 ✅, Phase 1 ✅ (ideology flags for gating)
 
 ### Design Parameters
@@ -608,40 +640,128 @@ SHARED TRUNK (4) — always visible, x=18, y=0→3
 
 ---
 
-## Phase 4: Diplomatic Focus Tree — "Macedonia Among Nations" — `#starter`
+## Phase 4: Diplomatic Focus Tree — "Macedonia Among Nations" — `#resumed`
 
-> **Depends on:** Phase 1 (political tree — irredentism gated behind ideology choice)
+> **Started:** 2026-07-17. Redesigned from scratch post-Phase 3 completion.
+> **Depends on:** Phase 1 (political tree — succession resolved). Timing gate: date > 1937.6.1.
 
-### Structure — 3 branches, ~16 focuses
+### Design Parameters
 
-#### Balkan League Path (4 focuses)
+| Parameter | Value |
+|---|---|
+| Core fantasy | Regional power broker — survival & defiance meets trade empire diplomacy |
+| Entry focus | `MAC_macedonia_among_nations` at x=55, y=0 |
+| Total focuses | ~26 (large scope, comparable to military tree) |
+| Gating | Shared trunk gated behind `SOTB_succession_resolved` + date > 1937.6.1. Branches gated by ideology flags from Phase 1. |
+| Faction name | "Balkan Defensive Union" (fixed) |
+| Great Powers | Situational — engage any, commit to none permanently. No MEX between alignment focuses. |
+| Irredentism | Defensive reclaiming for democratic/non-aligned. Full irredentism for fascist/monarchist. |
+| Trade tracker | Wired in Phase 4 — the tracker IS the diplomatic interface for trade empire diplomacy |
+
+### Tree Structure
+
 ```
-"Court Albania" → "Liberate Montenegro" → "Woo Romania" → "Balkan Federation"
+SHARED TRUNK (3) — x=55, y=0→2, gate: succession_resolved + date > 1937.6.1
+"Macedonia Among Nations" → "The Diplomatic Corps" → "The Balkan Question"
+                                  │
+        ┌─────────────┬───────────┼───────────┬──────────────┐
+        │             │           │           │              │
+   SECURE        TRADE EMPIRE  BALKAN     GREAT POWER    IRREDENTISM
+   BORDERS       DIPLOMACY     BROKER     GAME           (ideology-gated)
+   (4 focuses)   (4 focuses)   (5 focuses) (4 focuses)    (5 paths, 1-2 each)
+   x=48→44       x=58→62       x=52→48     x=61→65        x=55, y=7→9
+   y=3→6         y=3→6         y=3→7       y=3→6
+        │             │           │           │              │
+        └─────────────┴───────────┴───────────┴──────────────┘
+                                  │
+                          SHARED CAPSTONE (1)
+                     "Macedonia's Place in the Sun"
+                             x=55, y=10
 ```
-Creates `BALKAN_LEAGUE` faction. ALB, MNT (if exists), ROM invited.
 
-#### Great Power Alignment (4 mutually exclusive)
-- "Western Alignment" (UK/France guarantees, democratic drift)
-- "German Partnership" (trade, fascist drift)
-- "Soviet Embrace" (communist drift, Koliševski influence)
-- "Eternal Independence" (drift defense, cannot be puppeted)
+### Branch Detail
 
-#### Irredentism — Per-Ideology Methods
+#### Shared Trunk (3) — gate: `SOTB_succession_resolved` + date > 1937.6.1
 
-| Ideology | Method | Targets | Mechanic |
-|---|---|---|---|
-| **Fascist (Mihailov)** | Conquest | BUL (1082), GRE (1086), ALB (1087) | Focus grants wargoals directly |
-| **Non-Aligned (Aleksandrov/Archbishop)** | Ultimatum | BUL (1082), GRE (1086) | Demand territory — refuse = wargoal |
-| **Democratic (Delčev, Sandanski, Čento, Vlahov)** | Balkan Conference | BUL (1082), GRE (1086) | UK/France mediate. Plebiscites. Accept/Cede/Stall. |
-| **Democratic (Gjorche Petrov)** | Balkan Solidarity | None | Locks irredentism. Builds defensive faction instead. |
-| **Communist (Koliševski)** | Revolution | BUL, GRE, ALB | Support communist partisans. If target flips communist → joins faction, cedes claims. |
+| # | Focus ID | Name | Key Effect |
+|---|----------|------|------------|
+| 1 | `MAC_macedonia_among_nations` | "Macedonia Among Nations" | +25 PP, unlock "Diplomatic Initiative" decision category |
+| 2 | `MAC_diplomatic_corps` | "The Diplomatic Corps" | +1 operative slot, +10% diplomatic weight, +10% trade opinion |
+| 3 | `MAC_balkan_question` | "The Balkan Question" | Event SOTB.930 — threat assessment, unlocks all 5 branches |
 
-### Albania "Shield" Mechanic
+#### Branch A: Secure the Borders (4) — defensive diplomacy, x=48→44, y=3→6
 
-- **Focus: "The Shield of Albania"** (70d) — MAC guarantees ALB. +100 opinion. ALB gets `ALB_macedonian_shield` spirit.
-- **Italy reaction:** ITA gets decision "Accelerate Albanian Plans" — race for influence.
-- **Event: "The Adriatic Question"** — if ITA pressures ALB, ALB chooses: Turn to Solun / Submit to Rome / Stand Alone.
-- **Pogradec (1087):** Diplomatic option if ALB joins MAC faction — "territorial adjustment" cedes 1087 in exchange for guarantees.
+| # | Focus ID | Name | Key Effect |
+|---|----------|------|------------|
+| 4 | `MAC_securing_the_vardar` | "Securing the Vardar" | NAPs with approachable neighbours, +10% defense on core territory |
+| 5 | `MAC_shield_of_albania` | "The Shield of Albania" | Guarantee ALB, +100 ALB opinion, ALB gets `ALB_macedonian_shield`, ITA gets rival decision |
+| 6 | `MAC_adriatic_understanding` | "The Adriatic Understanding" | If ALB opinion >75: ALB joins faction or signs defensive pact. Event SOTB.931 chain |
+| 7 | `MAC_fortress_balkans` | "Fortress Balkans" | +10% fort construction, +10% entrenchment, unlock "Balkan Non-Aggression Pact" decision |
+
+#### Branch B: Trade Empire Diplomacy (4) — wires trade tracker, x=58→62, y=3→6
+
+| # | Focus ID | Name | Key Effect | Gate |
+|---|----------|------|------------|------|
+| 8 | `MAC_diplomatic_poppy` | "The Diplomatic Poppy" | Wire opium partners to tracker, −10 UK/FRA opinion, +50 PP | `MAC_poppy_path` done |
+| 9 | `MAC_tobacco_diplomacy` | "Tobacco Diplomacy" | Wire tobacco partners to tracker, +15% trade opinion, +1 civ | `MAC_revive_tkp` done |
+| 10 | `MAC_pharma_mandate` | "The Pharma Mandate" | Wire pharma partners to tracker, +10 UK/FRA opinion, +5% stability | `MAC_medicine_path` done |
+| 11 | `MAC_rakija_diplomacy` | "Rakija Diplomacy" | Wire rakija partners to tracker, +10 all Balkan opinion, event SOTB.932 | `MAC_pivarnica_skopje` done |
+
+#### Branch C: Balkan Power Broker (5) — faction building, x=52→48, y=3→7
+
+| # | Focus ID | Name | Key Effect |
+|---|----------|------|------------|
+| 12 | `MAC_balkan_conference_dip` | "The Balkan Conference" | Fire SOTB.900, +10% diplomatic weight |
+| 13 | `MAC_court_the_neighbours` | "Court the Neighbours" | +50 ALB/ROM/TUR/YUG opinion, unlock trade deals |
+| 14 | `MAC_balkan_defensive_union` | "A New League" | Create faction "Balkan Defensive Union", +100 PP |
+| 15 | `MAC_expand_the_league` | "Expand the League" | Decisions to invite Balkan nations, +10% faction member trade |
+| 16 | `MAC_balkan_federation_dip` | "The Balkan Federation" | Capstone: if 3+ faction members → upgraded spirit, shared research, +5% construction for all |
+
+#### Branch D: Great Power Game (4) — situational, NOT MEX, x=61→65, y=3→6
+
+| # | Focus ID | Name | Key Effect | Soft Cost |
+|---|----------|------|------------|------------|
+| 17 | `MAC_british_trade_mission` | "British Trade Mission" | +50 ENG opinion, +2 civ, +50 convoy, unlock British Military Advisory decision | +0.01 democratic drift |
+| 18 | `MAC_german_industrial_partnership` | "German Industrial Partnership" | +50 GER opinion, +2 mil, +100% industry research (1 use), unlock German Training Mission | +0.01 fascist drift |
+| 19 | `MAC_soviet_technical_exchange` | "Soviet Technical Exchange" | +50 SOV opinion, +100% armor research (1 use), +50 army XP, unlock Soviet Advisors | +0.02 communist drift |
+| 20 | `MAC_armed_neutrality_doctrine` | "Armed Neutrality Doctrine" | +25% drift defense, cannot be puppeted, +10% tension threshold for guarantees against MAC | — |
+
+#### Branch E: Irredentism (ideology-gated, 1-2 focuses each)
+
+| Ideology Gate | Focus ID(s) | Name | Mechanic | Targets |
+|---------------|-------------|------|----------|---------|
+| `SOTB_democratic_path` | `MAC_plebiscite_path` | "The Plebiscite Path" | Fire SOTB.901/902, UK/FRA mediate | 1082, 1086 |
+| `SOTB_non_aligned_path` | `MAC_historic_claims` | "Historic Claims" | Fire SOTB.910/911 ultimatums | 1082, 1086 |
+| `SOTB_fascist_path` or `SOTB_monarchist_path` | `MAC_iron_claim_dip` → `MAC_march_of_the_lion_dip` | "The Iron Claim" → "March of the Lion" | Direct wargoals, −50 BUL/GRE/ALB | 1082, 1086, 1087 |
+| `SOTB_communist_path` | `MAC_export_the_revolution` | "Export the Revolution" | Support partisans, flip target → faction join + cede claims | 1082, 1086, 1087 |
+| `SOTB_petrov_path` | `MAC_balkan_solidarity_dip` | "Balkan Solidarity" | LOCKS irredentism. Defensive faction + stability instead | None |
+
+#### Shared Capstone (1) — x=55, y=10
+
+| # | Focus ID | Name | Key Effect |
+|---|----------|------|------------|
+| 27 | `MAC_macedonia_place_in_the_sun` | "Macedonia's Place in the Sun" | Requires any 3 branch capstones. +1 research slot, +10% PP, +5% stability. Event SOTB.936 |
+
+### New Events
+
+| ID | Name | Purpose |
+|----|------|---------|
+| SOTB.930 | "Macedonia's Place in the World" | Threat assessment after "The Balkan Question" |
+| SOTB.931 | "The Adriatic Question" | ITA pressures ALB — ALB chooses: Turn to Solun / Submit to Rome / Stand Alone |
+| SOTB.932 | "The Rakija Summit" | Balkan leaders share a drink, +relations |
+| SOTB.933 | "The Pogradec Accord" | ALB cedes 1087 for guarantees + investment |
+| SOTB.934 | "The Invisible Empire" | News event — world reacts to MAC's trade reach |
+| SOTB.935 | "The Dream of Federation" | Balkan Federation formed — regional reactions |
+| SOTB.936 | "The World Takes Notice" | Capstone news — Major Power reactions |
+
+### New Decisions
+
+| Category | Decision | Purpose |
+|----------|----------|---------|
+| MAC_diplomatic_initiative | Establish Embassy | +25 opinion, +5% intel on target |
+| MAC_diplomatic_initiative | Balkan Non-Aggression Pact | Mutual NAP with Balkan neighbour |
+| MAC_diplomatic_initiative | Invite to Balkan Defensive Union | Faction invitation (available after "Expand the League") |
+| MAC_trade_empire | Toggle Trade Tracker | Opens/closes tracker GUI (already scaffolded) |
 
 ---
 
@@ -662,15 +782,43 @@ All focuses celebrate already-established heritage. No "discovery" — Macedonia
 
 ---
 
-## Phase 6: Opium GUI & Events — `#starter`
+## Phase 6: Trade Empire Tracker GUI & Opium Events — `#paused`
 
-> **Depends on:** Phase 3 (economic tree)
+> **Depends on:** Phase 3 (economic tree), Phase 4 (diplomatic tree — trade partners), Phase 5 (cultural — rakija)
 
 ### Scope
-- Custom GUI: dependency tracker, leverage score, influence decisions
-- Uses scripted graphs (Flaxbeard/hoi4-scripted-graphs) + parliament diagram
-- Implement basic mechanics FIRST (variables + decisions + events)
-- GUI added as polish pass
+
+The **Trade Empire Tracker** is a unified scripted GUI window that consolidates all of Macedonia's economic influence mechanics into one dashboard. It covers four trade verticals:
+
+| Vertical | Source | Mechanic |
+|---|---|---|
+| **Opium Dependency** | Phase 3 — Poppy Path (5 focuses) | Per-target dependency stages (0–5), leverage score, covert influence decisions, "Demand faction join" / "Demand release subject" at Stage 5 |
+| **Pharma Deals** | Phase 3 — Medicine Path (5 focuses) | Legitimate trade partners, "Send Medical Mission" / "Offer Medical Alliance" / "Medical Aid Programme" decisions, soft-power diplomatic weight |
+| **Tobacco Trade** | Phase 3 — TKP branch (6 focuses) | Premium export tiers (Oriental Standard → Prilep Gold → Global Markets), auction house income, trade opinion bonuses |
+| **Rakija Trade** | Phase 5b — Pivarnica Skopje + Rakija Tradition | Cultural export, −CG%, trade opinion, unique "Rakija Diplomacy" decisions with Balkan neighbours |
+
+### GUI Components (already scaffolded)
+
+| File | Purpose |
+|---|---|
+| `interface/SOTB_trade_tracker.gui` | Main container window with drag handle, bar chart, partner list, decisions button |
+| `common/scripted_guis/SOTB_trade_tracker.txt` | Scripted GUI logic — toggle button, main panel, partner bars, influence tracking |
+| `interface/pie_chart.gui` | Pie chart component for parliament/ideology distribution |
+| `common/scripted_guis/SOTB_pie_chart.txt` | Pie chart scripted GUI — segment coloring, dynamic sizing |
+| `common/scripted_effects/SOTB_pie_chart_effects.txt` | Pie chart calculation effects |
+| `common/scripted_effects/SOTB_influence_effects.txt` | Influence tracking effects for trade partners |
+| `common/scripted_triggers/SOTB_influence_triggers.txt` | Influence threshold triggers |
+| `interface/parliament_seat.gfx` | Parliament seat GFX definitions |
+| `common/scripted_guis/SOTB_parliament.txt` | Parliament diagram scripted GUI |
+| `common/scripted_effects/SOTB_parliament_effects.txt` | Parliament calculation effects |
+
+### Still Needed
+- Wire up partner bar variables (SOTB_top1_name, SOTB_top1_influence, etc.) to actual trade partner data
+- Implement dependency stage tracking per target nation (scripted variables)
+- Trade partner discovery/assignment events (opium partners, pharma partners, tobacco markets, rakija partners)
+- "Trade Empire Decisions" category linking tracker button to decisions
+- GFX assets: tracker background, toggle icon, partner flags, rank badges
+- Implement basic mechanics FIRST (variables + decisions + events), then GUI polish pass
 
 ---
 
@@ -720,6 +868,7 @@ All focuses celebrate already-established heritage. No "discovery" — Macedonia
 
 | Date | Decision | Rationale |
 |---|---|---|
+| 2026-07-25 | **FULL RESET.** Stripped all events, focus trees, decisions, ideas, scripted systems, opinion modifiers, on_actions, and content localisation | Redesigning mod from scratch. Map, states, graphics, country definitions, characters, and base history preserved as infrastructure. |
 | 2026-07-14 | ERM tag = ERM | Avoids RUM (Romania), ERE not standard |
 | 2026-07-14 | State 1089 for Eastern Rumelia | Was reserved as "Tamrash" — repurposed |
 | 2026-07-14 | Edirne stays as state 341 | Avoids empty state crashes |
@@ -743,6 +892,9 @@ All focuses celebrate already-established heritage. No "discovery" — Macedonia
 | 2026-07-16 | Icon audit: 84 focus + 67 spirit icons replaced | All verified against vanilla DDS files. 55 unique focus icons, 55 unique spirit pictures. 3 bookmark preview spirits fixed with `GFX_` prefix. 4 broken GFX names discovered and replaced (`GFX_goal_generic_navy` etc don't exist). |
 | 2026-07-16 | `major = yes` added to MAC country history | MAC now appears in major powers row on country selection screen instead of "Other countries". |
 | 2026-07-16 | Bookmark: desc condensed, crown focus removed, `MAC_the_crown` dropped | `MAC_SOTB_BOOKMARK_DESC` from 20 lines → 4. Preview focuses reduced to 3 (parliamentary crisis + democratic + authoritarian). |
+| 2026-07-17 | Phase 3 Economic Tree: 56 focuses completed | Exceeds original ~22 focus plan. 5 branches + ideology sub-gates + opium/medicine MEX. All localisation present. 15 economic events. |
+| 2026-07-17 | Phase 4 redesigned from scratch | Old design was pre-mod speculation. New design grounded in what Phase 1-3 actually built. Core fantasy: regional power broker + survival/defiance + trade empire diplomacy. 26 focuses, 5 branches, fixed faction name "Balkan Defensive Union", timing gate >1937.6.1. |
+| 2026-07-17 | Phase 6 renamed: "Trade Empire Tracker GUI & Opium Events" | Expands beyond opium-only to cover all four trade verticals: opium dependency, pharma deals, tobacco trade, rakija trade. Unified tracker dashboard. |
 
 ---
 
